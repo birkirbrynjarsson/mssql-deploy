@@ -80,6 +80,8 @@ Example configuration file: `deply-config.json`
 ## Build & Development
 The project uses `pipenv` for managing packages and virtual environment.
 
+Use Python 3.12 for local development.
+
 Install `pipenv` with `pip` or optionally `brew` (MacOS)
 ```bash
 pip install pipenv
@@ -87,7 +89,7 @@ pip install pipenv
 
 Install packages:
 ```bash
-pipenv install
+pipenv --python 3.12 install --dev
 ```
 
 Run the program within the virtualenv
@@ -97,9 +99,7 @@ pipenv run python app.py
 
 Build the program from within the virtualenv with `pyinstaller`
 ```bash
-pipenv shell
-pyinstaller --onefile app.py -n mssql-deploy
-exit
+pipenv run pyinstaller --onefile app.py -n mssql-deploy
 ```
 
 ## Contributing

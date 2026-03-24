@@ -4,11 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
-pyinstaller = "*"
+pylint = "~=3.3"
+pyinstaller = "~=6.13"
 
 [packages]
 argparse = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.12"
